@@ -1,0 +1,424 @@
+html{
+    font-size: 100%;
+    --green: #22d022;
+    --blue: #22acce;
+}
+
+@media (max-width: 62em) {
+    html{
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 40em) {
+    html{
+        font-size: 90%;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+input{
+    padding: 6%;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-radius: 0.3rem;
+    background-color: #ccc;
+}
+
+input[type='submit']{
+    background-color: var(--blue);
+    color: #fff;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    font-size: 1.125rem;
+    color: #333;
+}
+
+@media screen and (min-width: 62em) {
+    .wrapper{
+        display: flex;
+        padding: 2vw;
+    }
+
+    .wrapper .col-1{
+        order: 1;
+        margin: 0 1.5%;
+        width: 50%;
+    }
+
+    .wrapper .col-2{
+        order: 0;
+        width: 25%;
+    }
+
+    .wrapper .col-3{
+        order: 2;
+        width: 25%;
+    }
+}
+/*
+@media screen and (min-width: 75em) {
+    .wrapper .col-1{
+        width: 50%;
+    }
+
+    .col-2, .col-3{
+        width: 25%;
+    }
+}
+*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    background-color: #e4e4e4;
+}
+
+section{
+    margin: 2rem 0;
+}
+
+.main-col-sec{
+    background-color: #fff;
+    border-radius: 15px 15px 0 0;
+}
+
+/******** Main Column *********/
+
+/*** Site Header ***/
+.site-header{
+    padding: 30% 3%;
+    background-image: url(../img/header-bg.jpg);
+    background-size: cover;
+}
+
+.site-header h1{
+    width: fit-content;
+    margin: 0;
+    padding: 0.3rem 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #000;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+    top: 6rem;
+}
+
+.col-1 .main-section-title{
+    background-color: #ccc;
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
+    margin: 0;
+}
+
+/*** Trending Posts Section ***/
+
+.trending-posts article{
+    padding: 6% 3%;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.trending-posts .avatar{
+    font-size: 3rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem
+}
+
+.trending-posts .post-info p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.trending-posts .post-info p span{
+    font-weight: 100;
+    color: #aaa;
+}
+
+.trending-posts .post-info p + span{
+    color: #555;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.trending-posts .post > p{
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #737373
+}
+
+.trending-posts .see-more{
+    width: 94%;
+    margin: 2rem 3%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem;
+    background: #e4e4e4;
+    display: inline-block;
+}
+
+/*** Recent Posts Section ***/
+
+.recent-posts article{
+    display: flex;
+    align-items: flex-start;
+    padding: 6% 3%
+}
+
+.recent-posts .avatar{
+    font-size: 3rem;
+    border: 1px solid #666;
+    padding: 1rem 1.8rem;
+    border-radius: 0.3rem;
+    margin-right: 1rem
+}
+
+.recent-posts .post h3{
+    margin-top: 0;
+    font-size: 1.25rem
+}
+
+.recent-posts .post p{
+    line-height: 1.5;
+    font-size: 1.125rem
+}
+
+.recent-posts .pagination{
+    display: flex;
+    justify-content: flex-end;
+    padding: 6% 3%;
+}
+
+.recent-posts .pagination span{
+    font-weight: 600;
+    background-color: #ccc;
+    color: #fff;
+    margin-left: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    cursor: pointer
+}
+
+.recent-posts .pagination span.active{
+    background-color: var(--green);
+}
+
+/***** Side Columns Widgets *****/
+
+.side-widget{
+    margin-bottom: 8%;
+    border-radius: 0.3rem;
+    background-color: #fff;
+}
+
+.widget-title{
+    margin: 0;
+    padding: 7%;
+    border-bottom: 2px solid #e4e4e4;
+    position: relative;
+}
+
+.widget-content{
+    padding: 7%;
+}
+
+/*** Search Form ***/
+
+.col-2 .search-form form{
+    display: flex;
+}
+
+.col-2 .search-form form input:first-child{
+    width: 60%;
+    margin-right: 5%;
+}
+
+.col-2 .search-form form input:nth-child(2){
+    width: 35%;
+}
+
+/*** Members and Group Lists ***/
+
+.order span{
+    background-color: var(--green);
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.members .member-list li,
+.groups .group-list li{
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-gap: 4%;
+    margin-top: 1.5rem;
+}
+
+.members .member-avatar,
+.groups .group-avatar{
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 50%;
+    margin-right: 4%;
+}
+
+.members .member-info p,
+.groups .group-info p{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.members .member-info span,
+.groups .group-info span{
+    color: var(--blue);
+    background-color: rgba(34, 172, 206, 0.1);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    font-style: italic
+}
+
+/*** Clendar ***/
+
+.calendar .widget-content{
+    font-style: italic;
+}
+
+.calendar .today{
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.calendar table{
+    width: 100%;
+}
+
+.calendar tr{
+    text-align: center;
+}
+
+.calendar .cal-pagination{
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer
+}
+
+/*** Sign in Form ***/
+
+.signin-form input[type="text"],
+.signin-form input[type="password"],
+.signin-form input[type="submit"]{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.signin-form input[type="password"] + div{
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.signin-form input[type="password"] + div input,
+.signin-form input[type="password"] + div label{
+    vertical-align: middle;
+}
+
+.signin-form input[type="submit"]{
+    font-size: 1.125rem;
+}
+
+.signin-form input[type="submit"] + div{
+    font-style: italic;
+    color: #666;
+    font-size: 0.95rem
+}
+
+/*** Statistics ***/
+
+.stats .stats-list li{
+    background-color: hsla(330, 72%, 47%, 1);
+    color: #fff;
+    padding: 0.8rem 0.6rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.125rem;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats .stats-list li i {
+    margin-right: 0.3rem;
+}
+
+/*** Online ***/
+
+.online p{
+    color: #777;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/*** Recent Replies ***/
+
+.replies .reply,
+.topics .topic{
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.replies .reply p{
+    display: contents;
+    font-weight: 600;
+}
+
+.topics .topic p{
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.replies .reply span,
+.topics .topic span{
+    color: #757474;
+    font-size: 0.95rem;
+}
